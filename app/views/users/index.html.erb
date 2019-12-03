@@ -1,0 +1,16 @@
+<div class="container">
+    <% @users.each do |user| %>
+    <div class="form">
+        <%= link_to("/users/#{user.name}") do %>
+            <div class="profile">
+                <div class="user-image">
+                    <img src="" alt="image">
+                </div>
+                <div class="username">
+                    <%= user.name %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    <%end%>
+</div>

@@ -1,0 +1,100 @@
+// Place all the styles related to the user controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "home";
+.form {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px #2c3236;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    p {
+        color: $main-color;
+    }
+    &-header {
+        padding:6px 0 18px;
+        font-size: 18px;
+        color: $main-color;
+    }
+    &-main {
+        text-align: left;
+        p {
+            font-size: 12px;
+            padding-bottom: 4px;
+        }
+    }
+    &-error {
+        color: red;
+        font-size: 8px;
+        padding-bottom: 20px;
+    }
+    
+    @include mq(tb) {
+        padding: 20px 40px;
+        &-header {
+            padding:8px 0 24px;
+            font-size: 24px;
+        }
+        &-main {
+            text-align: left;
+            p {
+                font-size: 16px;
+                padding-bottom: 4px;
+            }
+        }
+        &-error {
+            font-size: 12px;
+            padding-bottom: 20px;
+        }
+    
+    }
+    @include mq(pc) {
+        padding: 40px 100px;
+        &-header {
+            padding:12px 0 32px;
+            font-size: 36px;
+        }
+        &-main {
+            text-align: left;
+            p {
+                font-size: 24px;
+                padding-bottom: 4px;
+            }
+        }
+        &-error {
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.text-box {
+    width: 100%;
+    height: 24px;
+    margin-bottom: 20px;
+    padding: 14px;
+    border: 1px solid #d8dadf;
+}
+
+.btn {
+    display: block;
+    margin: 12px auto;
+    padding: 8px 50px;
+    background-color: $main-color;
+    color: #ffffff;
+}
+
+.user-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 25%;
+    background-color:#cacaca;
+    display: inline-block;
+    margin: auto 40px;
+}
+
+.username {
+    color: $main-color;
+}
