@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       flash[:notice] = "ログインしました"
-      redirect_to("/users/index")
+      redirect_to("/main")
     else
       @error_message = "メールアドレスまたはパスワードが間違っています"
       @email = params[:email]
@@ -53,6 +53,12 @@ class UsersController < ApplicationController
     @user = User.find_by(name: params[:name])
   end
 
+  def destroy
+    @user = User.find_by(id: params[:id])
+    @user.destroy
+    flash[:notice] = "アカウントは削除されました"
+    redirect_to("/")
+  end
 
 
 end

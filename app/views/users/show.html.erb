@@ -5,6 +5,34 @@
             <div class="username">
                 <%= @user.name %>
             </div>
+            <div class="task_index">
+                <div class="task_index_title">
+                    <p>タスク一覧</p>
+                </div>
+            </div>
+            <div class="task_index_content">
+                <% if  @user.task == nil%>
+                    <div class="not_exist">
+                        <p>存在しません</p>
+                    </div>
+                <% else %>
+                    <div class="tasks">
+                    <% @user.task.each do |task| %>
+                        <div class="task">
+                            <div class="task_context">
+                                <%= task.context %>
+                            </div>
+                            <div class="complete">
+                                <%= link_to("完了","/tasks/#{task.id}",method: :delete,data: {confirm: "本当に削除しますか？"}) %>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
+            </div>
+            <div class="delete">
+                <%= link_to("アカウントを削除","/users/#{@user.id}",method: :delete,data: {confirm: "本当に削除しますか？"}) %>
+            </div>
         </div>
     </div>
 </div>

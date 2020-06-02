@@ -3,13 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "home";
+
+.main{
+    background-image: none;
+    background-color: #fff;
+}
 .form {
     width: 100%;
-    padding: 10px 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 6px #2c3236;
-    margin-bottom: 4px;
-    border-radius: 5px;
+    margin: 100px 0;
     p {
         color: $main-color;
     }
@@ -87,14 +88,59 @@
 }
 
 .user-image {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     border-radius: 25%;
     background-color:#cacaca;
     display: inline-block;
-    margin: auto 40px;
+    margin: 40px 80px;
 }
 
 .username {
     color: $main-color;
+    font-size: 30px;
+}
+
+.task_index_title{
+    margin: 30px;
+    font-size: 30px;
+}
+
+.task{
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0px 5px #2c3236;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    padding: 0;
+    color: #000;
+    font-size: 20px;
+    line-height: 50px;
+    
+}
+
+.task_context{
+    width: 90%;
+    display: inline-block;
+    text-align: left;
+    word-wrap: break-word;
+
+}
+
+.complete{
+    color: blue;
+        display: inline-block;
+        text-align: right;
+        &:active{
+            color: blue;
+        }
+}
+
+
+.delete {
+    padding-top: 500px;
+    a{
+            color: red;
+        
+    }
 }
